@@ -1,0 +1,12 @@
+C:\Users\K208-3\Documents\12ит\Решетникова\пз\ПЗ2\obj\Debug\ПЗ2.csprojResolveAssemblyReference.cache
+C:\Users\K208-3\Documents\12ит\Решетникова\пз\ПЗ2\bin\Debug\ПЗ2.exe.config
+C:\Users\K208-3\Documents\12ит\Решетникова\пз\ПЗ2\bin\Debug\ПЗ2.exe
+C:\Users\K208-3\Documents\12ит\Решетникова\пз\ПЗ2\bin\Debug\ПЗ2.pdb
+C:\Users\K208-3\Documents\12ит\Решетникова\пз\ПЗ2\obj\Debug\ПЗ2.exe
+C:\Users\K208-3\Documents\12ит\Решетникова\пз\ПЗ2\obj\Debug\ПЗ2.pdb
+C:\Users\K208-3\Documents\12ит\Решетникова безносиков\пз\ПЗ2\obj\Debug\ПЗ2.csprojResolveAssemblyReference.cache
+C:\Users\K208-3\Documents\12ит\Решетникова безносиков\пз\ПЗ2\obj\Debug\ПЗ2.exe
+C:\Users\K208-3\Documents\12ит\Решетникова безносиков\пз\ПЗ2\bin\Debug\ПЗ2.exe.config
+C:\Users\K208-3\Documents\12ит\Решетникова безносиков\пз\ПЗ2\bin\Debug\ПЗ2.exe
+C:\Users\K208-3\Documents\12ит\Решетникова безносиков\пз\ПЗ2\bin\Debug\ПЗ2.pdb
+C:\Users\K208-3\Documents\12ит\Решетникова безносиков\пз\ПЗ2\obj\Debug\ПЗ2.pdb
