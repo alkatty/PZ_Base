@@ -10,3 +10,10 @@ C:\Users\K208-3\Documents\12ит\Решетникова безносиков\п�
 C:\Users\K208-3\Documents\12ит\Решетникова безносиков\пз\ПЗ2\bin\Debug\ПЗ2.exe
 C:\Users\K208-3\Documents\12ит\Решетникова безносиков\пз\ПЗ2\bin\Debug\ПЗ2.pdb
 C:\Users\K208-3\Documents\12ит\Решетникова безносиков\пз\ПЗ2\obj\Debug\ПЗ2.pdb
+C:\Users\onepamop\Documents\GitHub\PZ_Base\ПЗ2\bin\Debug\ПЗ2.exe.config
+C:\Users\onepamop\Documents\GitHub\PZ_Base\ПЗ2\bin\Debug\ПЗ2.exe
+C:\Users\onepamop\Documents\GitHub\PZ_Base\ПЗ2\bin\Debug\ПЗ2.pdb
+C:\Users\onepamop\Documents\GitHub\PZ_Base\ПЗ2\obj\Debug\ПЗ2.csprojAssemblyReference.cache
+C:\Users\onepamop\Documents\GitHub\PZ_Base\ПЗ2\obj\Debug\ПЗ2.csproj.CoreCompileInputs.cache
+C:\Users\onepamop\Documents\GitHub\PZ_Base\ПЗ2\obj\Debug\ПЗ2.exe
+C:\Users\onepamop\Documents\GitHub\PZ_Base\ПЗ2\obj\Debug\ПЗ2.pdb

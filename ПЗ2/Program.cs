@@ -38,6 +38,7 @@ namespace ПЗ2
 					case 18: Program.Zadacha18(); break;
 					case 19: Program.Zadacha19(); break;
 					case 20:Program.Zadacha20(); break;
+					case 21: Program.Zadacha21(); break;
 
 					default: run_program = false; break;	
 				}	

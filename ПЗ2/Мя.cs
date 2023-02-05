@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
+using System.Threading;
 
 namespace ПЗ2
 {
@@ -21,7 +22,7 @@ namespace ПЗ2
 			{
 				for (int j = 0; j < myArray.GetLength(1); j++)
 				{
-					Console.Write("{0} ", myArray[i,j]);
+					Console.Write("{0} ", myArray[i, j]);
 				}
 				Console.WriteLine();
 			}
@@ -30,24 +31,23 @@ namespace ПЗ2
 		{
 			return (a < b) ? a : b;
 		}
-		
 		public static int NC_MinDigit(int a)
 		{
 			if (a == 0) return 0;
 			var digits = new int[a.ToString().Length];
 			for (int b = a.ToString().Length; b > 0; b--)
 			{
-				
-				digits[b-1]=a%10;
+
+				digits[b - 1] = a % 10;
 				a /= 10;
 			}
-			
-			
+
+
 			return digits.ToArray().Min();
 		}
 		public static double god_bless_pifagor(double a, double b)
 		{
-			return Math.Sqrt(Math.Pow(a,2) + Math.Pow(b,2));
+			return Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2));
 		}
 		static public int[] Change(int[] myArray, int length)
 		{
@@ -80,9 +80,9 @@ namespace ПЗ2
 			int[] myArray = new int[length];
 			Random rnd = new Random();
 			for (int i = 0; i < length; i++)
-				{
-					myArray[i] = rnd.Next(-100, 100);
-				}
+			{
+				myArray[i] = rnd.Next(-100, 100);
+			}
 			return myArray;
 		}
 		static public void Swap(ref int a, ref int b)
@@ -94,12 +94,12 @@ namespace ПЗ2
 		}
 		static public int[,] Randomize2(int height, int length)
 		{
-			int[,] myArray = new int[height,length];
+			int[,] myArray = new int[height, length];
 			Random rnd = new Random();
 			for (int i = 0; i < height; i++)
 				for (int j = 0; j < length; j++)
 				{
-					myArray[i,j] = rnd.Next(-100, 100);
+					myArray[i, j] = rnd.Next(-100, 100);
 				}
 			return myArray;
 		}
@@ -109,19 +109,19 @@ namespace ПЗ2
 			switch (Setup)
 			{
 				case "manual":
-					for (int i = 0; i < length; i++){myArray[i] = Program.Readln();} break;
+					for (int i = 0; i < length; i++) { myArray[i] = Program.Readln(); } break;
 				case "random":
 					myArray = Randomize(length); break;
 				case "null":
-					for (int i = 0; i < length; i++){myArray[i] = 0;} break;
-			
+					for (int i = 0; i < length; i++) { myArray[i] = 0; } break;
+
 			}
 			return myArray;
-			
+
 		}
-		static public int[,] Manual2( int height, int length,string Setup)
+		static public int[,] Manual2(int height, int length, string Setup)
 		{
-			int[,] myArray = new int[height,length];
+			int[,] myArray = new int[height, length];
 			switch (Setup)
 			{
 				case "manual":
@@ -129,36 +129,33 @@ namespace ПЗ2
 						for (int i = 0; i < height; i++)
 							for (int j = 0; j < length; j++)
 							{
-								myArray[i,j] = Program.Readln();
-							} 
+								myArray[i, j] = Program.Readln();
+							}
 						break;
 					}
 				case "random":
-					myArray = Randomize2(height,length); break;
+					myArray = Randomize2(height, length); break;
 				case "null":
 					for (int i = 0; i < height; i++)
-							for (int j = 0; j < length; j++)
+						for (int j = 0; j < length; j++)
 						{
-							myArray[i,j] = 0;
+							myArray[i, j] = 0;
 						}
 					break;
-			
+
 			}
 			return myArray;
-			
-		}		
+
+		}
 		static public int Choise()
 		{
 			Console.WriteLine();
 			int top = Console.CursorTop;
 			int y = top;
-			var fillers = new Dictionary<int, string> { {1,"Ввести вручную"}, {2,"Заполнить рандомными значениями"}, {3,"Заполнить нулями"} };
-			//Console.WriteLine("Ввести вручную");
-			//Console.WriteLine("Заполнить рандомными значениями");
-			//Console.WriteLine("Заполть нулями");
+			var fillers = new Dictionary<int, string> { { 1, "Ввести вручную" }, { 2, "Заполнить рандомными значениями" }, { 3, "Заполнить нулями" } };
 			foreach (var filler in fillers)
 				Console.WriteLine(filler.Value);
-			
+
 			int down = Console.CursorTop;
 
 			Console.CursorSize = 100;
@@ -169,45 +166,38 @@ namespace ПЗ2
 			{
 				if (key == ConsoleKey.Escape)
 					return 0;
-    			if (key == ConsoleKey.UpArrow)
-    			{
-     			   if (y > top)
-       				{
-           				y--;
-            			Console.CursorTop = y;
-        			}
-    			}
-    			else if (key == ConsoleKey.DownArrow)
-    			{
-        			if (y < down - 1)
-        			{
-            			y++;
-            			Console.CursorTop = y;
-        			}
-    			}
+				if (key == ConsoleKey.UpArrow)
+				{
+					if (y > top)
+					{
+						y--;
+						Console.CursorTop = y;
+					}
+				}
+				else if (key == ConsoleKey.DownArrow)
+				{
+					if (y < down - 1)
+					{
+						y++;
+						Console.CursorTop = y;
+					}
+				}
 			}
 
 			Console.CursorTop = down;
 
-			/*if (y == top)
-				return 1;
-			else if (y == top + 1)
-				return 2;
-			else if (y == top + 2)
-    			return 3;
-			else*/
 			foreach (var filler in fillers)
 			{
 				int Key = top + filler.Key - 1;
-					if (y == Key)
-					{
-						return filler.Key;
-					
-					}
+				if (y == Key)
+				{
+					return filler.Key;
+
+				}
 			}
-				return 0;
-		}	
-		
+			return 0;
+		}
+
 		static public int Choise2()
 		{
 			var tasks = new Dictionary<int, string>()
@@ -231,88 +221,76 @@ namespace ПЗ2
 				{17,"Редактируем пипку без смс и регистрации v.2\n"},
 				{18,"Извращения с файлами, с смс и регистрацией\n"},
 				{19, "kek"},
-				{20, "x = 2, y = 5, свапаем их значения"}
+				{20, "x = 2, y = 5, свапаем их значения"},
+				{21, "Рекурсивная падла"}
 
 			};
 			int top = Console.CursorTop;
 			int y = top;
-			
+
 			for (int i = 0; i < tasks.Keys.Max(); i++)
-				Console.WriteLine(i+1);
-			
+				Console.WriteLine(i + 1);
+
 			Console.WriteLine("exit");
-			
+
 			int down = Console.CursorTop;
 
 			Console.CursorSize = 100;
 			Console.CursorTop = top;
 
 			ConsoleKey key;
-			while ((key = Console.ReadKey(true).Key) != ConsoleKey.Enter )
+			while ((key = Console.ReadKey(true).Key) != ConsoleKey.Enter)
 			{
-    			if (key == ConsoleKey.UpArrow)
-    			{
-     			   if (y > top)
-       				{
-           				y--;
-            			Console.CursorTop = y;
-        			}
-    			}
-    			else if (key == ConsoleKey.DownArrow)
-    			{
-        			if (y < down - 1)
-        			{
-            			y++;
-            			Console.CursorTop = y;
-        			}
-    			}
-    			
-			}	
-				
+				if (key == ConsoleKey.UpArrow)
+				{
+					if (y > top)
+					{
+						y--;
+						Console.CursorTop = y;
+					}
+				}
+				else if (key == ConsoleKey.DownArrow)
+				{
+					if (y < down - 1)
+					{
+						y++;
+						Console.CursorTop = y;
+					}
+				}
+
+			}
+
 			Console.CursorTop = down;
 
 			foreach (var task in tasks)
 			{
-				int Key = top + task.Key - 1;											//!!!!
+				int Key = top + task.Key - 1;                                           //!!!!
 				if (y == Key)
-					{
-						Console.WriteLine(task.Value);
-						return task.Key;
-					
-					}
+				{
+					Console.WriteLine(task.Value);
+					return task.Key;
+
+				}
 			}
-			/*if (y == top)
-				return 1;
-			else if (y == top + 1)
-				return 2;
-			else if (y == top + 2)
-    			return 3;
-			else if (y == top + 3)
-    			return 4;
-			else if (y == top + 4)
-    			return 5;
-			else if (y == top + 5)
-    			return 6;
-			else if (y == top + 6)
-    			return 7;
-			else if (y == top + 7)
-    			return 8;
-			else if (y == top + 8)
-    			return 9;
-			else if (y == top + 9)
-    			return 10;
-			else if (y == top + 10)
-    			return 11;
-			else if (y == top + 11)
-    			return 12;
-			else
-				return 0;*/
-		
+
 			return 0;
 		}
-		
-		
+		static public long AKbyaka(uint number)
+		{
+			if (number <= 2)
+				return (number == 1) ? -10 : 2;
+			else
+				return Math.Abs(AKbyaka(number - 2)) - 6*AKbyaka(number - 1);
+		}
+		static public string ToBinary(int number)
+		{
+			return Convert.ToString(number, 2);
+		}
+		static public string Lunatic(int number)
+		{
+			return((number == 0) ? "No fucking motherfuckers in your stupid life, you may die too piece of shit\n":(number+" motherfuckers left\n1 motherfucker dead\n"+Lunatic(number-1)) );
 
+		}
 	}
 	
 	

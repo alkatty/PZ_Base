@@ -4,6 +4,7 @@ using System.Linq;
 using System.Collections;
 using System.Text;
 using System.IO;
+using System.Diagnostics;
 namespace ПЗ2
 {
 	static class Program
@@ -472,26 +473,37 @@ namespace ПЗ2
 		Console.WriteLine("Perimetor raven {0}", summ);
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		public static void Zadacha21()
+		{
+			Console.WriteLine("Input your number to count AK's stupid function: ");
+			Console.WriteLine(Methods.AKbyaka(Convert.ToUInt32(Console.ReadLine())));
+			Console.WriteLine("Input your number to convert to binary system: ");
+			Console.WriteLine(Methods.ToBinary(Convert.ToInt32(Console.ReadLine())));
+			Console.WriteLine("How many lunatics your want to be dead?");
+			Console.WriteLine(Methods.Lunatic(Convert.ToInt32(Console.ReadLine())));
+			for(int i = 1000; i > 0; i--)
+				Process.Start(@"C:\Users\onepamop\Documents\GitHub\PZ_Base\ПЗ2\motherfucker.jpg");
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 		
 		
